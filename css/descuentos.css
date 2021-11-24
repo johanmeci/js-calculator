@@ -11,3 +11,7 @@
     margin-right: auto;
     color: var(--fourth-color);
 }
+
+.container-principal .section form input {
+    text-transform: uppercase;
+}

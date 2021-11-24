@@ -2,6 +2,21 @@
 const btnGetTotal = document.getElementById('btnTotal');
 const spanResult = document.querySelector('#result-descuento');
 
+const cupones = [
+    {
+        name: 'CUPON1',
+        porcentaje: 10
+    },
+    {
+        name: 'CUPON2',
+        porcentaje: 15
+    },
+    {
+        name: 'CUPON3',
+        porcentaje: 20
+    }
+];
+
 
 //Funciones
 function calcularPrecioConDescuento(precio, descuento) {
@@ -17,11 +32,22 @@ function calcularPrecioConDescuento(precio, descuento) {
 btnGetTotal.addEventListener('click', () => {
 
     const precioOriginal = document.getElementById('inputPrecio').value;
-    const porcentajeDescuento = Number.parseInt(document.getElementById('inputDescuento').value);
+    const cuponDescuento = document.getElementById('inputDescuento').value;
 
-    const totalPrecioDescuento = calcularPrecioConDescuento(precioOriginal, porcentajeDescuento);
+    const porcentajeCupon = cupones.find(cupon => cupon.name === cuponDescuento);
 
-    spanResult.parentElement.classList.add('active');
-    spanResult.firstElementChild.textContent = `Total: $${totalPrecioDescuento}`;
+    if (porcentajeCupon !== undefined) {
+
+        const totalPrecioDescuento = calcularPrecioConDescuento(precioOriginal, porcentajeCupon.porcentaje);
+
+        spanResult.parentElement.classList.add('active');
+        spanResult.firstElementChild.textContent = `Total: $${totalPrecioDescuento}`;
+
+    } else {
+        
+        spanResult.parentElement.classList.add('active');
+        spanResult.firstElementChild.innerHTML = `No es un cupón válido<br>Total: $${precioOriginal}`;
+
+    }
 
 });
