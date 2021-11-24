@@ -17,6 +17,7 @@ const areaCirculo = (radio) => (radio * radio) * pi;
 const spanResultCuadrado = document.querySelector('#result-cuadrado');
 const spanResultTriangulo = document.querySelector('#result-triangulo');
 const spanResultCirculo = document.querySelector('#result-circulo');
+const spanResultIsosceles = document.querySelector('#result-isosceles');
 
 function calcularFigura(e) {
 
@@ -92,6 +93,26 @@ function calcularFigura(e) {
         spanResultCirculo.lastElementChild.textContent = `${result.toFixed(2)}cm`;
 
         spanResultCirculo.parentElement.classList.add('active');
+
+    } else if(fig === 'isosceles') {
+
+        const inputIsosceles1 = Number.parseInt(document.getElementById('inputIsosceles1').value);
+        const inputIsosceles2 = Number.parseInt(document.getElementById('inputIsosceles2').value);
+        const inputIsoscelesBase = Number.parseInt(document.getElementById('inputIsoscelesBase').value);
+
+        if (inputIsosceles1 === inputIsosceles2 && inputIsosceles1 !== inputIsoscelesBase) {
+            
+            const alturaIsosceles = Math.sqrt(inputIsosceles1**2 - inputIsoscelesBase**2 / 4);
+
+            spanResultIsosceles.firstElementChild.textContent = 'Altura:';
+            spanResultIsosceles.lastElementChild.textContent = `${alturaIsosceles.toFixed(2)}cm`;
+
+        } else {
+            spanResultIsosceles.firstElementChild.textContent = 'No triángulo isósceles';
+            spanResultIsosceles.lastElementChild.textContent = '';
+        }
+
+        spanResultIsosceles.parentElement.classList.add('active');
 
     } else {
         console.log('otra figura');

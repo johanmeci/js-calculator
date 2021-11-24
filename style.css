@@ -176,4 +176,9 @@ body {
         max-width: 1200px;
     }
 
+    .container-principal .section {
+        max-width: 380px;
+        min-width: 220px;
+    }
+
 }

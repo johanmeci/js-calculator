@@ -106,6 +106,39 @@
 
         </section>
 
+        <section class="section isosceles">
+            <div class="section-header">
+                <img src="./img/triangulo.svg" alt="triangulo">
+                <h2 class="section-title">Triángulo isósceles</h2>
+            </div>
+            <form action="">
+                <div class="form-group">
+                    <label  for="inputIsosceles1">Lado 1</label>
+                    <input id="inputIsosceles1" type="number"/>
+                </div>
+                <div class="form-group">
+                    <label for="inputIsosceles2">Lado 2</label>
+                    <input id="inputIsosceles2" type="number"/>
+                </div>
+                <div class="form-group">
+                    <label for="inputIsoscelesBase">Base</label>
+                    <input id="inputIsoscelesBase" type="number"/>
+                </div>
+
+                <div class="div-result" id="div-result">
+                    <span class="span-result" id="result-isosceles">
+                        <span id="type">Altura:</span>
+                        <span id="result">0cm</span>
+                    </span>
+                </div>
+            </form>
+
+            <div class="div-actions">
+                <button class="btn" type="button" onclick="calcularFigura(this)" data-calc="altura" data-fig="isosceles">Altura</button>
+            </div>
+
+        </section>
+
     </main>
     <script src="./figuras.js"></script>
 </body>
