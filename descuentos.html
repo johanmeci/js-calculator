@@ -5,9 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porcentajes y Descuentos | Curso Práctico de JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/descuentos.css">
 </head>
 <body>
-    <h1>Porcentajes y Descuentos</h1>
+    <main class="container-principal">
+        <header>
+            <h1>Porcentajes y Descuentos</h1>
+        </header>
+
+        <section class="section">
+            <div class="section-header">
+                <img src="./img/cuadrado.svg" alt="cuadrado">
+                <h2 class="section-title">Cuadrado</h2>
+            </div>
+
+            <form action="">
+                <div class="form-group">
+                    <label for="inputCuadrado">Precio</label>
+                    <input id="inputCuadrado" type="number"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputCuadrado">Descuento</label>
+                    <input id="inputCuadrado" type="number"/>
+                </div>
+
+                <div class="div-result" id="div-result">
+                    <span class="span-result" id="result-cuadrado">
+                        <span id="result">0cm</span>
+                    </span>
+                </div>
+            </form>
+
+            <div class="div-actions">
+                <button class="btn" type="button" onclick="calcularFigura(this)" data-calc="perimetro" data-fig="cuadrado">Total</button>
+            </div>
+        </section>
+
+    </main>
 
     <script src="./js/descuentos.js"></script>
 </body>
