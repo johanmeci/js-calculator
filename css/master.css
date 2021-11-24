@@ -83,6 +83,7 @@ body {
 }
 
 .container-principal .section form input {
+    font-family: 'Quicksand', sans-serif;
     height: 22px;
     border-radius: 5px;
     border: 1px solid var(--fourth-color);

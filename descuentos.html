@@ -19,30 +19,30 @@
 
         <section class="section">
             <div class="section-header">
-                <img src="./img/cuadrado.svg" alt="cuadrado">
-                <h2 class="section-title">Cuadrado</h2>
+                <img src="./img/descuento.svg" alt="descuento">
+                <h2 class="section-title">Descuentos</h2>
             </div>
 
             <form action="">
                 <div class="form-group">
-                    <label for="inputCuadrado">Precio</label>
-                    <input id="inputCuadrado" type="number"/>
+                    <label for="inputPrecio">Precio</label>
+                    <input id="inputPrecio" type="number"/>
                 </div>
 
                 <div class="form-group">
-                    <label for="inputCuadrado">Descuento</label>
-                    <input id="inputCuadrado" type="number"/>
+                    <label for="inputDescuento">Porcentaje descuento</label>
+                    <input id="inputDescuento" type="number"/>
                 </div>
 
                 <div class="div-result" id="div-result">
-                    <span class="span-result" id="result-cuadrado">
-                        <span id="result">0cm</span>
+                    <span class="span-result" id="result-descuento">
+                        <span id="result">$0</span>
                     </span>
                 </div>
             </form>
 
             <div class="div-actions">
-                <button class="btn" type="button" onclick="calcularFigura(this)" data-calc="perimetro" data-fig="cuadrado">Total</button>
+                <button id="btnTotal" class="btn" type="button" onclick="calcularPrecioConDescuento()">Total</button>
             </div>
         </section>
 
