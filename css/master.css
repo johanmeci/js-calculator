@@ -3,6 +3,7 @@
     --second-color: #9fd3c7;
     --third-color: #385170;
     --fourth-color: #142d4c;
+    --placeholder-color: #d5d5d5;
 }
 
 body {
@@ -82,7 +83,8 @@ body {
     margin-bottom: 1rem;
 }
 
-.container-principal .section form input {
+.container-principal .section form input,
+.container-principal .section form select {
     font-family: 'Quicksand', sans-serif;
     height: 22px;
     border-radius: 5px;
@@ -92,7 +94,13 @@ body {
     font-size: .8rem;
 }
 
-.container-principal .section form input:focus {
+.container-principal .section form select {
+    width: 155px;
+    height: 29.5px;
+}
+
+.container-principal .section form input:focus,
+.container-principal .section form select:focus {
     outline: none;
 }
 

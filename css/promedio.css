@@ -1,0 +1,17 @@
+.container-principal .section .section-header img {
+    width: 30px;
+    margin-left: auto;
+    margin-right: .5rem;
+}
+
+.container-principal .section .section-header .section-title {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    margin-right: auto;
+    color: var(--fourth-color);
+}
+
+.container-principal .section form input::placeholder {
+    color: var(--placeholder-color);
+}
