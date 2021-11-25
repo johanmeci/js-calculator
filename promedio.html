@@ -20,19 +20,21 @@
         <section class="section">
             <div class="section-header">
                 <img src="./img/descuento.svg" alt="promedio">
-                <h2 class="section-title">Promedio</h2>
+                <h2 id="section-title" class="section-title">Promedio</h2>
             </div>
 
             <form action="">
                 <div class="form-group">
                     <label for="inputLista">Lista numérica</label>
-                    <input id="inputLista" type="text" placeholder="10,50,100,20,90"/>
+                    <input id="inputLista" type="text" placeholder="10,50,100,20,90" value="10,50,100,20,90"/>
                 </div>
 
                 <div class="form-group">
                     <label for="selectTipo">Tipo</label>
                     <select name="selectTipo" id="selectTipo">
-                        <option value="1">Promedio</option>
+                        <option value="1" selected>Promedio</option>
+                        <option value="2">Moda</option>
+                        <option value="3">Mediana</option>
                     </select>
                 </div>
 
@@ -45,7 +47,7 @@
             </form>
 
             <div class="div-actions">
-                <button id="btnTotal" class="btn" type="button" onclick="console.log('click')">Calcular</button>
+                <button id="btnTotal" class="btn" type="button" onclick="calcularPMM()">Calcular</button>
             </div>
         </section>
     </main>
