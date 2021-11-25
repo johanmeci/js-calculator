@@ -14,18 +14,26 @@ function calcularPMM() {
 
     if (tipoCalculo.value === '1') {
 
-        console.group('Promedio');
-
         resultCalculo = calcularPromedio(listaNumerica);
         console.log('Promedio: ' + resultCalculo);
-        console.groupEnd();
 
     } else if(tipoCalculo.value === '2') {
 
-        console.group('Moda');
+        const objCount = {}
 
-        console.log(listaNumerica);
-        console.groupEnd();
+        listaNumerica.map( elemento => {
+            if (objCount[elemento]) {
+                objCount[elemento] += 1;
+            } else {
+                objCount[elemento] = 1;
+            }
+        });
+
+        const arrayCount = Object.entries(objCount).sort( (a, b) => a[1] - b[1]
+        );
+
+        resultCalculo = arrayCount[arrayCount.length - 1];
+        console.log(`Moda: ${resultCalculo[0]} - Cantidad: ${resultCalculo[1]}`);
 
     } else if(tipoCalculo.value === '3') {
 
@@ -35,8 +43,6 @@ function calcularPMM() {
         const elemento1 = listaNumerica[mitadLista - 1];
         const elemento2 = listaNumerica[mitadLista];
 
-        console.group('Mediana');
-
         if (listaNumerica.length % 2 === 0) {
             resultCalculo = calcularPromedio([elemento1, elemento2]);
         } else {
@@ -44,8 +50,6 @@ function calcularPMM() {
         }
         
         console.log('Mediana: ' + resultCalculo);
-
-        console.groupEnd();
 
     }
     
