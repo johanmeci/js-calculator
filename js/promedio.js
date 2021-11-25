@@ -1,5 +1,6 @@
 //Variables
 const tipoCalculo = document.getElementById('selectTipo');
+const spanResult = document.getElementById('result-promedio');
 //{1: Promedio, 2: Moda, 3: Mediana}
 const tituloCalculo = document.getElementById('section-title');
 
@@ -33,7 +34,7 @@ function calcularPMM() {
         );
 
         resultCalculo = arrayCount[arrayCount.length - 1];
-        console.log(`Moda: ${resultCalculo[0]} - Cantidad: ${resultCalculo[1]}`);
+        resultCalculo = `Moda: ${resultCalculo[0]} - Cant: ${resultCalculo[1]}`;
 
     } else if(tipoCalculo.value === '3') {
 
@@ -52,6 +53,9 @@ function calcularPMM() {
         console.log('Mediana: ' + resultCalculo);
 
     }
+
+    spanResult.parentElement.classList.add('active');
+    spanResult.lastElementChild.textContent = resultCalculo;
     
 }
 

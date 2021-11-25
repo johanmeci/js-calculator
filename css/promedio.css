@@ -15,3 +15,7 @@
 .container-principal .section form input::placeholder {
     color: var(--placeholder-color);
 }
+
+.container-principal .section .div-result #type {
+    font-weight: bold;
+}
