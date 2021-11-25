@@ -27,3 +27,11 @@
 .container-principal .section .div-result #type {
     font-weight: bold;
 }
+
+@media (min-width: 1200px) {
+
+    .container-principal {
+        max-width: 600px;
+    }
+
+}
