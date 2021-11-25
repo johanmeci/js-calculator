@@ -12,6 +12,14 @@
     color: var(--fourth-color);
 }
 
+.container-principal .section form input {
+    width: 220px;
+}
+
+.container-principal .section form select {
+    width: 238px;
+}
+
 .container-principal .section form input::placeholder {
     color: var(--placeholder-color);
 }
