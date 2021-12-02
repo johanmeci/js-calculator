@@ -50,6 +50,21 @@ body {
     color: white;
 }
 
+.container-principal .btn-back {
+    background-color: white;
+    color: var(--fourth-color);
+    text-decoration: none;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+    border: 1px solid white;
+}
+
+.container-principal .btn-back:hover {
+    background-color: var(--fourth-color);
+    color: white;
+}
+
 .container-principal h1 {
     text-align: center;
     margin-top: 0;
